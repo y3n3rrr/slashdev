@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductBox 1`] = `
+<RNCSafeAreaProvider
+  onInsetsChange={[Function]}
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
+
+exports[`ProductBox test 1`] = `
+<RNCSafeAreaProvider
+  onInsetsChange={[Function]}
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
+
+exports[`check state after process 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "padding": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingLeft": 10,
+      }
+    }
+  >
+    <View>
+      <Text
+        style={
+          Object {
+            "fontSize": 18,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          }
+        }
+      >
+        title
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "darkgray",
+            "fontSize": 12,
+            "opacity": 0.9,
+          }
+        }
+      >
+        description
+      </Text>
+    </View>
+    &gt;
+    $12.00
+  </View>
+</View>
+`;

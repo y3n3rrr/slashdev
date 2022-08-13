@@ -1,10 +1,10 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, { useContext, useEffect, useState } from "react";
 
-import {ProductContext} from '../context/ProductContext';
+import { ProductContext } from "../context/ProductContext";
 
-export default function BillCalculator() {
-  const {state} = useContext(ProductContext);
-  const {Products, ShoppingCart} = state;
+export default function useBillCalculator() {
+  const { state } = useContext(ProductContext);
+  const { Products, ShoppingCart } = state;
   const [bill, setBill] = React.useState(false);
 
   const getBill = () => {
@@ -20,13 +20,13 @@ export const calculateBill = (cartItems, productItems) => {
   let discount = 0;
   const deliveryFee = 5;
 
-  cartItems.map(item => {
+  cartItems.map((item) => {
     let dicountRate = item.count >= 3 ? 0.5 : 1;
-    const product = productItems.filter(f => f.id === item.id)[0];
+    const product = productItems.filter((f) => f.id === item.id)[0];
     subTotal += product.price * item.count;
     if (dicountRate < 1) discount += product.price * item.count * dicountRate;
   });
   let total = subTotal + deliveryFee - discount;
 
-  return {subTotal, deliveryFee, discount, total};
+  return { subTotal, deliveryFee, discount, total };
 };
